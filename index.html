@@ -14,7 +14,47 @@
                 return (choices[Math.floor(x)]);
             }
 
-            alert(getComputerChoice());           
+            function playRound(playerSelection, computerSelection) {
+                let player = playerSelection.toLowerCase();
+                if (player === "rock") {
+                    if (computerSelection === "rock") {
+                        console.log("It's a tie! You chose the same weapon.")
+                    } else if (computerSelection === "paper") {
+                        console.log("You lose! Paper beats rock.")
+                    } else if (computerSelection === "scissors") {
+                        console.log("You win! Rock beats scissors.");
+                    }
+                } else if (player === "paper") {
+                    if (computerSelection === "rock") {
+                        console.log("You win! Paper beats rock.")
+                    } else if (computerSelection === "paper") {
+                        console.log("It's a tie! You chose the same weapon.")
+                    } else if (computerSelection === "scissors") {
+                        console.log("You lose! Scissors beat paper.");
+                    }
+                } else if (player === "scissors") {
+                    if (computerSelection === "rock") {
+                        console.log("You lose! Rock beats scissors.")
+                    } else if (computerSelection === "paper") {
+                        console.log("You win! Scissors beat paper.");
+                    } else if (computerSelection === "scissors") {
+                        console.log("It's a tie! You chose the same weapon.")
+                    }
+                } else {
+                    console.log("Either you spelled it wrong or not a valid weapon!");
+                }               
+            } 
+            
+            let playerSelection = String(prompt("Choose a weapon:"));
+            let computerSelection = getComputerChoice();
+
+            function game() {
+                for (let i = 0; i < 5; i++) {
+                    playRound(playerSelection, computerSelection);
+                }
+            }
+
+            game();
         </script>
     </body>
 </html>
