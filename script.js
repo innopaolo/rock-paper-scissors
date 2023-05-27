@@ -73,6 +73,9 @@ function game() {
     } else {
         console.log("It's a mexican standoff.");
     }
+
 }
 
 game();
+
+
