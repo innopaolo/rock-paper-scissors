@@ -55,7 +55,7 @@ function game() {
         let playerSelection = String(prompt("Choose a weapon:"));
 
         if (playerSelection != "rock" && playerSelection != "paper" && playerSelection != "scissors"){
-            i = i - 1;
+            i = i - 1; // Round is not counted if player doesn't select any of the choices
         }
 
         let computerSelection = getComputerChoice();
