@@ -4,10 +4,28 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
         <title>Rock, Paper, Scissors!</title>
     </head>
     <body>
-        The action happens in the console.<br> Press F12 to see it!
+        <div class="player-choice">
+            <h1>Choose your weapon!</h1>
+            <div class="weapons">
+                <div class="scissors"><img src="scissors.png" alt="scissors hand"></div>
+                <div class="paper"><img src="paper.png" alt="paper hand"></div>
+                <div class="rock"><img src="rock.png" alt="rock hand"></div>
+            </div>
+        </div>
+        <div class="computer-plus-results">
+            <div class="com-choice">
+                <h1>The computer chooses:</h1>
+                <img id="cycle" src="question.jpg" alt="computer chooses a random weapon">
+            </div>
+            <div class="results">
+                <h1>Round results:</h1>
+                <div class="rounds"></div>
+            </div>
+        </div>
         <script src="script.js"></script>
         
     </body>
